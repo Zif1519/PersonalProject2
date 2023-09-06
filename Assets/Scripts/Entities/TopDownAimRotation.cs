@@ -10,11 +10,11 @@ public class TopDownAimRotation : MonoBehaviour
 
     [SerializeField] private SpriteRenderer characterRenderer;
 
-    private TopDownCharacterController _controller;
+    private InputHandler _controller;
 
     private void Awake()
     {
-        _controller = GetComponent<TopDownCharacterController>();
+        _controller = GetComponent<InputHandler>();
     }
 
     private void Start()

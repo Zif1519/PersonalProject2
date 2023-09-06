@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerInputController : TopDownCharacterController
+public class PlayerController : InputHandler
 {
     private Camera _camera;// Start is called before the first frame update
     private void Awake()
