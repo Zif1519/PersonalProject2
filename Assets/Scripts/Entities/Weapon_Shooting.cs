@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TopDownShooting : MonoBehaviour
+public class Weapon_Shooting : MonoBehaviour, IMouseClickHandler
 {
     private IController _controller;
     [SerializeField] private Transform projectileSpawnPosition;
@@ -16,7 +16,7 @@ public class TopDownShooting : MonoBehaviour
     }
     private void Start()
     {
-        _controller.OnMouseClickHandler += OnShoot;
+        _controller.OnMouseClickHandler += Weapon_Shoot;
     }
 
     private void Update()
@@ -27,7 +27,7 @@ public class TopDownShooting : MonoBehaviour
         }
     }
 
-    private void OnShoot()
+    public void Weapon_Shoot()
     {
         if (_isReady)
         {

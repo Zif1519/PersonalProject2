@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Movement_Grid : MonoBehaviour
+public class Movement_Grid : MonoBehaviour, IKeyboardInputHandler
 {
     private GameObject _player;
     private IController _controller;
@@ -10,7 +10,6 @@ public class Movement_Grid : MonoBehaviour
     private Rigidbody2D _rigidbody;
 
     private float _timeSinceLastMove = float.MaxValue;
-    private bool IsMoving { get; set; }
 
     private float _movementTime = 0.2f;
 
@@ -27,7 +26,7 @@ public class Movement_Grid : MonoBehaviour
     }
     private void Start()
     {
-        _controller.OnKeyboardInputHandler += Move;
+        _controller.OnKeyboardInputHandler += Character_Move;
     }
 
     private void HandleMoveDelay()
@@ -41,10 +40,6 @@ public class Movement_Grid : MonoBehaviour
             _timeSinceLastMove = 0f;
             StartCoroutine(GridMove(new Vector2(transform.position.x +_movementDirection.x, transform.position.y + _movementDirection.y)));
         }
-    }
-    private void Move(Vector2 direction)
-    {
-        _movementDirection = direction;
     }
 
     private IEnumerator GridMove(Vector2 target)
@@ -62,5 +57,10 @@ public class Movement_Grid : MonoBehaviour
             yield return null;
         }
         _player.transform.position = new Vector3(target.x, target.y, _player.transform.position.z);
+    }
+
+    public void Character_Move(Vector2 direction)
+    {
+        _movementDirection = direction;
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Movement_Smooth : MonoBehaviour
+public class Movement_Smooth : MonoBehaviour, IKeyboardInputHandler
 {
     private IController _controller;
 
@@ -19,10 +19,10 @@ public class Movement_Smooth : MonoBehaviour
     }
     private void Start()
     {
-        _controller.OnKeyboardInputHandler += Move;
+        _controller.OnKeyboardInputHandler += Character_Move;
     }
 
-    private void Move(Vector2 direction)
+    public void Character_Move(Vector2 direction)
     {
         _movementDirection = direction;
     }

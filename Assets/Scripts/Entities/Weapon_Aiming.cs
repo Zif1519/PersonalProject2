@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TopDownAimRotation : MonoBehaviour
+public class Weapon_Aiming : MonoBehaviour, IMouseMoveHandler
 {
     [SerializeField] private SpriteRenderer armRenderer;
     [SerializeField] private Transform armPivot;
@@ -16,12 +16,12 @@ public class TopDownAimRotation : MonoBehaviour
 
     private void Start()
     {
-        _controller.OnMouseMoveHandler += OnAim;
+        _controller.OnMouseMoveHandler += Weapon_Aim;
     }
 
 
 
-    public void OnAim(Vector2 newAimDirection)
+    public void Weapon_Aim(Vector2 newAimDirection)
     {
         RotateArm(newAimDirection);
     }
