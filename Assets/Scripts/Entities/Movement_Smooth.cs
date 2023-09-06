@@ -1,18 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class TopDownMovement : MonoBehaviour
+public class Movement_Smooth : MonoBehaviour, IKeyboardInputHandler
 {
-    private PlayerController _controller;
+    private IController _controller;
 
     private Vector2 _movementDirection = Vector2.zero;
     private Rigidbody2D _rigidbody;
 
     private void Awake()
     {
-        _controller = GetComponent<PlayerController>();
+        _controller = GetComponent<IController>();
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
@@ -22,10 +19,10 @@ public class TopDownMovement : MonoBehaviour
     }
     private void Start()
     {
-        _controller.OnMoveEvent += Move;
+        _controller.OnKeyboardInputHandler += Character_Move;
     }
 
-    private void Move(Vector2 direction)
+    public void Character_Move(Vector2 direction)
     {
         _movementDirection = direction;
     }

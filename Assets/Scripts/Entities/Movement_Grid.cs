@@ -1,23 +1,22 @@
 using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class GridMovement : MonoBehaviour
+public class Movement_Grid : MonoBehaviour, IKeyboardInputHandler
 {
     private GameObject _player;
-    private PlayerController _controller;
+    private IController _controller;
 
     private Vector2 _movementDirection = Vector2.zero;
     private Rigidbody2D _rigidbody;
+
     private float _timeSinceLastMove = float.MaxValue;
-    private bool IsMoving { get; set; }
+
     private float _movementTime = 0.2f;
+
     private void Awake()
     {
         _player = gameObject;
-        _controller = GetComponent<PlayerController>();
+        _controller = GetComponent<IController>();
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
@@ -27,7 +26,7 @@ public class GridMovement : MonoBehaviour
     }
     private void Start()
     {
-        _controller.OnMoveEvent += Move;
+        _controller.OnKeyboardInputHandler += Character_Move;
     }
 
     private void HandleMoveDelay()
@@ -42,10 +41,6 @@ public class GridMovement : MonoBehaviour
             StartCoroutine(GridMove(new Vector2(transform.position.x +_movementDirection.x, transform.position.y + _movementDirection.y)));
         }
     }
-    private void Move(Vector2 direction)
-    {
-        _movementDirection = direction;
-    }
 
     private IEnumerator GridMove(Vector2 target)
     {
@@ -54,20 +49,18 @@ public class GridMovement : MonoBehaviour
 
         while (currenttime < _movementTime)
         {
-            // 시간에 따른 보간된 위치 계산
             float t = currenttime / _movementTime;
             Vector2 newPosition = Vector2.Lerp(initialPosition, target, t);
-
-            // 트랜스폼 위치 업데이트
             _player.transform.position = new Vector3(newPosition.x, newPosition.y, _player.transform.position.z);
-
-            // 시간 경과 업데이트
             currenttime += Time.deltaTime;
 
             yield return null;
         }
-
-        // 보간이 완료된 후 최종 위치를 설정
         _player.transform.position = new Vector3(target.x, target.y, _player.transform.position.z);
+    }
+
+    public void Character_Move(Vector2 direction)
+    {
+        _movementDirection = direction;
     }
 }
