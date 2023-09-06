@@ -5,36 +5,52 @@ using UnityEngine;
 
 public class TopDownShooting : MonoBehaviour
 {
-    private PlayerController _controller;
-
+    private IInputHandler _controller;
     [SerializeField] private Transform projectileSpawnPosition;
-    private Vector2 _aimDirection = Vector2.right;
 
     public GameObject testPrefab;
 
-    // Start is called before the first frame update
+    private float _timeSinceLastAttack = 0f;
+    private bool _isReady = true;
+    
     private void Awake()
     {
-        _controller = GetComponent<PlayerController>();
+        _controller = GetComponent<IInputHandler>();
     }
-
     private void Start()
     {
         _controller.OnMouseClickHandler += OnShoot;
-        _controller.OnMouseMoveHandler += OnAim;
     }
 
-    private void OnAim(Vector2 newAimDirection)
+    private void Update()
     {
-        _aimDirection = newAimDirection;
+        HandleAttackDelay();
     }
+
     private void OnShoot()
     {
-        CreateProjectile();
+        if (_isReady)
+        {
+            CreateProjectile();
+            _isReady = false;
+            _timeSinceLastAttack = 0f;
+        }
     }
 
     private void CreateProjectile()
     {
         Instantiate(testPrefab, projectileSpawnPosition.position, Quaternion.identity);
+    }
+
+    private void HandleAttackDelay()
+    {
+        if ( !_isReady )
+        {
+            _timeSinceLastAttack += Time.deltaTime;
+            if (_timeSinceLastAttack > 0.2f)
+            {
+                _isReady = true;
+            }
+        }
     }
 }

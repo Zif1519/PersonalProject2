@@ -7,7 +7,7 @@ using UnityEngine;
 public class GridMovement : MonoBehaviour
 {
     private GameObject _player;
-    private PlayerController _controller;
+    private IInputHandler _controller;
 
     private Vector2 _movementDirection = Vector2.zero;
     private Rigidbody2D _rigidbody;
@@ -17,7 +17,7 @@ public class GridMovement : MonoBehaviour
     private void Awake()
     {
         _player = gameObject;
-        _controller = GetComponent<PlayerController>();
+        _controller = GetComponent<IInputHandler>();
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
@@ -54,20 +54,13 @@ public class GridMovement : MonoBehaviour
 
         while (currenttime < _movementTime)
         {
-            // 시간에 따른 보간된 위치 계산
             float t = currenttime / _movementTime;
             Vector2 newPosition = Vector2.Lerp(initialPosition, target, t);
-
-            // 트랜스폼 위치 업데이트
             _player.transform.position = new Vector3(newPosition.x, newPosition.y, _player.transform.position.z);
-
-            // 시간 경과 업데이트
             currenttime += Time.deltaTime;
 
             yield return null;
         }
-
-        // 보간이 완료된 후 최종 위치를 설정
         _player.transform.position = new Vector3(target.x, target.y, _player.transform.position.z);
     }
 }

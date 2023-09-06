@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class TopDownMovement : MonoBehaviour
 {
-    private PlayerController _controller;
+    private IInputHandler _controller;
 
     private Vector2 _movementDirection = Vector2.zero;
     private Rigidbody2D _rigidbody;
 
     private void Awake()
     {
-        _controller = GetComponent<PlayerController>();
+        _controller = GetComponent<IInputHandler>();
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
