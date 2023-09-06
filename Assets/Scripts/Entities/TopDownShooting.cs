@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TopDownShooting : MonoBehaviour
 {
-    private InputHandler _controller;
+    private PlayerController _controller;
 
     [SerializeField] private Transform projectileSpawnPosition;
     private Vector2 _aimDirection = Vector2.right;
@@ -15,7 +15,7 @@ public class TopDownShooting : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        _controller = GetComponent<InputHandler>();
+        _controller = GetComponent<PlayerController>();
     }
 
     private void Start()
