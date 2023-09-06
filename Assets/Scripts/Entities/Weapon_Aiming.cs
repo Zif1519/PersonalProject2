@@ -1,30 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class TopDownAimRotation : MonoBehaviour
+public class Weapon_Aiming : MonoBehaviour, IMouseMoveHandler
 {
     [SerializeField] private SpriteRenderer armRenderer;
     [SerializeField] private Transform armPivot;
 
     [SerializeField] private SpriteRenderer characterRenderer;
 
-    private PlayerController _controller;
+    private IController _controller;
 
     private void Awake()
     {
-        _controller = GetComponent<PlayerController>();
+        _controller = GetComponent<IController>();
     }
 
     private void Start()
     {
-        _controller.OnLookEvent += OnAim;
+        _controller.OnMouseMoveHandler += Weapon_Aim;
     }
 
 
 
-    public void OnAim(Vector2 newAimDirection)
+    public void Weapon_Aim(Vector2 newAimDirection)
     {
         RotateArm(newAimDirection);
     }
