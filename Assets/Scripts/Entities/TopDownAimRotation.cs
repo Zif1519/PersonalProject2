@@ -19,7 +19,7 @@ public class TopDownAimRotation : MonoBehaviour
 
     private void Start()
     {
-        _controller.OnLookEvent += OnAim;
+        _controller.OnMouseMoveHandler += OnAim;
     }
 
 

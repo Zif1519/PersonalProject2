@@ -20,8 +20,8 @@ public class TopDownShooting : MonoBehaviour
 
     private void Start()
     {
-        _controller.OnAttackEvent += OnShoot;
-        _controller.OnLookEvent += OnAim;
+        _controller.OnMouseClickHandler += OnShoot;
+        _controller.OnMouseMoveHandler += OnAim;
     }
 
     private void OnAim(Vector2 newAimDirection)

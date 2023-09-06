@@ -7,9 +7,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour, IInputHandler
 {
-    public event Action<Vector2> OnMoveEvent;
-    public event Action<Vector2> OnLookEvent;
-    public event Action OnAttackEvent;
+    public event Action<Vector2> OnKeyboardInputHandler;
+    public event Action<Vector2> OnMouseMoveHandler;
+    public event Action OnMouseClickHandler;
+
     private float _timeSinceLastAttack = float.MaxValue;
 
     protected bool IsAttacking { get; set; }
@@ -25,13 +26,13 @@ public class PlayerController : MonoBehaviour, IInputHandler
         HandleAttackDelay();
     }
 
-    public void OnMove(InputValue value)
+    public void OnKeyboardInput(InputValue value)
     {
         //Debug.Log("OnMove" + value.ToString());
         Vector2 moveInput = value.Get<Vector2>().normalized;
-        CallMoveEvent(moveInput);
+        OnKeyboardInputHandler?.Invoke(moveInput);
     }
-    public void OnLook(InputValue value)
+    public void OnMouseMove(InputValue value)
     {
         //Debug.Log("OnLook" + value.ToString());
         Vector2 newAim = value.Get<Vector2>();
@@ -40,11 +41,11 @@ public class PlayerController : MonoBehaviour, IInputHandler
 
         if(newAimDir.magnitude >= 0.9f)
         {
-            CallLookEvent(newAimDir);
+            OnMouseMoveHandler?.Invoke(newAimDir);
         }
     }
 
-    public void OnFire(InputValue value)
+    public void OnMouseClick(InputValue value)
     {
         IsAttacking = value.isPressed;
     }
@@ -58,20 +59,13 @@ public class PlayerController : MonoBehaviour, IInputHandler
         if (IsAttacking && _timeSinceLastAttack > 0.2f)
         {
             _timeSinceLastAttack = 0f;
-            CallAttackEvent();
+            CallMouseClickEvent();
         }
     }
 
-    public void CallMoveEvent(Vector2 direction)
+
+    public void CallMouseClickEvent()
     {
-        OnMoveEvent?.Invoke(direction);
-    }
-    public void CallLookEvent(Vector2 direction)
-    {
-        OnLookEvent?.Invoke(direction);
-    }
-    public void CallAttackEvent()
-    {
-        OnAttackEvent?.Invoke();
+        OnMouseClickHandler?.Invoke();
     }
 }

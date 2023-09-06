@@ -22,7 +22,7 @@ public class TopDownMovement : MonoBehaviour
     }
     private void Start()
     {
-        _controller.OnMoveEvent += Move;
+        _controller.OnKeyboardInputHandler += Move;
     }
 
     private void Move(Vector2 direction)

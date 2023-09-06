@@ -6,7 +6,7 @@
             "id": "7654e462-725f-4c68-8e90-e43c24d7a3e8",
             "actions": [
                 {
-                    "name": "Move",
+                    "name": "KeyboardInput",
                     "type": "Value",
                     "id": "5d128065-075a-4462-8a1d-b1c945a1853a",
                     "expectedControlType": "Vector2",
@@ -15,7 +15,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Look",
+                    "name": "MouseMove",
                     "type": "Value",
                     "id": "90697ef6-687b-4115-b01c-1cd7955470c9",
                     "expectedControlType": "Vector2",
@@ -24,19 +24,10 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Fire",
+                    "name": "MouseClick",
                     "type": "Value",
                     "id": "08a625f1-c08c-4a3f-ae32-0c68719db3f5",
                     "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Jump",
-                    "type": "Value",
-                    "id": "e06467af-3f26-4032-85c8-b140e42830fd",
-                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -50,7 +41,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "KeyboardInput",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -61,7 +52,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Move",
+                    "action": "KeyboardInput",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -72,7 +63,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Move",
+                    "action": "KeyboardInput",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -83,7 +74,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Move",
+                    "action": "KeyboardInput",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -94,7 +85,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Move",
+                    "action": "KeyboardInput",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -105,7 +96,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "KeyboardInput",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -116,7 +107,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Move",
+                    "action": "KeyboardInput",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -127,7 +118,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Move",
+                    "action": "KeyboardInput",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -138,7 +129,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Move",
+                    "action": "KeyboardInput",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -149,7 +140,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Move",
+                    "action": "KeyboardInput",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -160,7 +151,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Look",
+                    "action": "MouseMove",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -171,18 +162,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Fire",
+                    "action": "MouseClick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "4c407fb4-6f15-49b3-b7f4-7d4620773c95",
+                    "id": "c3742c38-eab7-4d4e-8315-4bcabf27ea1b",
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Jump",
+                    "action": "MouseClick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

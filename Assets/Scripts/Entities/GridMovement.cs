@@ -27,7 +27,7 @@ public class GridMovement : MonoBehaviour
     }
     private void Start()
     {
-        _controller.OnMoveEvent += Move;
+        _controller.OnKeyboardInputHandler += Move;
     }
 
     private void HandleMoveDelay()

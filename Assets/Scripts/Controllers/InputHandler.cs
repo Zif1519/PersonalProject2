@@ -1,26 +1,14 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public interface IInputHandler
 {
-    
+        event Action<Vector2> OnKeyboardInputHandler;
+        event Action<Vector2> OnMouseMoveHandler;
+        event Action OnMouseClickHandler;
 
-    
-
-   
-
-
-    void Start()
-    {
-        
-    }
-
-    
+        void OnKeyboardInput(InputValue value);
+        void OnMouseMove(InputValue value);
+        void OnMouseClick(InputValue value);
 }
-    //[SerializeField]
-    //private float speed = 3.0f;
-    //// Start is called before the first frame update
-    /////float x = Input.GetAxis("Horizontal");
-        //float y = Input.GetAxis("Vertical");
-
-        //transform.position += new Vector3(x, y) * Time.deltaTime * speed;
