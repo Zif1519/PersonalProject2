@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class TopDownAimRotation : MonoBehaviour
@@ -10,11 +7,11 @@ public class TopDownAimRotation : MonoBehaviour
 
     [SerializeField] private SpriteRenderer characterRenderer;
 
-    private IInputHandler _controller;
+    private IController _controller;
 
     private void Awake()
     {
-        _controller = GetComponent<IInputHandler>();
+        _controller = GetComponent<IController>();
     }
 
     private void Start()

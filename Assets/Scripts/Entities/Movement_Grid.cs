@@ -1,23 +1,23 @@
 using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class GridMovement : MonoBehaviour
+public class Movement_Grid : MonoBehaviour
 {
     private GameObject _player;
-    private IInputHandler _controller;
+    private IController _controller;
 
     private Vector2 _movementDirection = Vector2.zero;
     private Rigidbody2D _rigidbody;
+
     private float _timeSinceLastMove = float.MaxValue;
     private bool IsMoving { get; set; }
+
     private float _movementTime = 0.2f;
+
     private void Awake()
     {
         _player = gameObject;
-        _controller = GetComponent<IInputHandler>();
+        _controller = GetComponent<IController>();
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 

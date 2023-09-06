@@ -1,21 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.PackageManager.UI;
 using UnityEngine;
 
 public class TopDownShooting : MonoBehaviour
 {
-    private IInputHandler _controller;
+    private IController _controller;
     [SerializeField] private Transform projectileSpawnPosition;
 
     public GameObject testPrefab;
 
-    private float _timeSinceLastAttack = 0f;
+    private float _timeSinceLastOperation = 0f;
     private bool _isReady = true;
-    
+
     private void Awake()
     {
-        _controller = GetComponent<IInputHandler>();
+        _controller = GetComponent<IController>();
     }
     private void Start()
     {
@@ -24,7 +21,10 @@ public class TopDownShooting : MonoBehaviour
 
     private void Update()
     {
-        HandleAttackDelay();
+        if (!_isReady)
+        {
+            SetReadyAfterDelay();
+        }
     }
 
     private void OnShoot()
@@ -33,24 +33,19 @@ public class TopDownShooting : MonoBehaviour
         {
             CreateProjectile();
             _isReady = false;
-            _timeSinceLastAttack = 0f;
+            _timeSinceLastOperation = 0f;
         }
     }
-
     private void CreateProjectile()
     {
         Instantiate(testPrefab, projectileSpawnPosition.position, Quaternion.identity);
     }
-
-    private void HandleAttackDelay()
+    private void SetReadyAfterDelay()
     {
-        if ( !_isReady )
+        _timeSinceLastOperation += Time.deltaTime;
+        if (_timeSinceLastOperation > 0.2f)
         {
-            _timeSinceLastAttack += Time.deltaTime;
-            if (_timeSinceLastAttack > 0.2f)
-            {
-                _isReady = true;
-            }
+            _isReady = true;
         }
     }
 }

@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public interface IInputHandler
+public interface IController
 {
         event Action<Vector2> OnKeyboardInputHandler;
         event Action<Vector2> OnMouseMoveHandler;

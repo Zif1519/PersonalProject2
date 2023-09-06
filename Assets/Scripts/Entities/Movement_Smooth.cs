@@ -1,18 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class TopDownMovement : MonoBehaviour
+public class Movement_Smooth : MonoBehaviour
 {
-    private IInputHandler _controller;
+    private IController _controller;
 
     private Vector2 _movementDirection = Vector2.zero;
     private Rigidbody2D _rigidbody;
 
     private void Awake()
     {
-        _controller = GetComponent<IInputHandler>();
+        _controller = GetComponent<IController>();
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 

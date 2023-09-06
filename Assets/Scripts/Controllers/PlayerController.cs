@@ -1,11 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerInputHandler : MonoBehaviour, IInputHandler
+public class PlayerController : MonoBehaviour, IController
 {
     public event Action<Vector2> OnKeyboardInputHandler;
     public event Action<Vector2> OnMouseMoveHandler;
