@@ -6,7 +6,7 @@ public interface IController
 {
         event Action<Vector2> OnKeyboardInputHandler;
         event Action<Vector2> OnMouseMoveHandler;
-        event Action OnMouseClickHandler;
+        event Action<AttackSO> OnMouseClickHandler;
 
         void OnKeyboardInput(InputValue value);
         void OnMouseMove(InputValue value);

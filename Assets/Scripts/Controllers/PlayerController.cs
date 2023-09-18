@@ -6,11 +6,15 @@ public class PlayerController : MonoBehaviour, IController
 {
     public event Action<Vector2> OnKeyboardInputHandler;
     public event Action<Vector2> OnMouseMoveHandler;
-    public event Action OnMouseClickHandler;
+    public event Action<AttackSO> OnMouseClickHandler;
 
     private Camera _camera;// Start is called before the first frame update
+    private AttackSO _attackSO;
     private void Awake()
-    {   _camera = Camera.main;   }
+    {   
+        _camera = Camera.main;
+        _attackSO = GetComponent<CharacterStatsHandler>()._CurrentStats._AttackSO;
+    }
 
     public void OnKeyboardInput(InputValue value)
     {
@@ -28,6 +32,7 @@ public class PlayerController : MonoBehaviour, IController
     }
     public void OnMouseClick(InputValue value)
     {
-        OnMouseClickHandler?.Invoke();
+        Debug.Log("»£√‚µ ");
+        OnMouseClickHandler?.Invoke(_attackSO);
     }
 }

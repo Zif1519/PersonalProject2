@@ -3,6 +3,7 @@ using UnityEngine;
 public class Movement_Smooth : MonoBehaviour, IKeyboardInputHandler
 {
     private IController _controller;
+    private CharacterStatsHandler _stats;
 
     private Vector2 _movementDirection = Vector2.zero;
     private Rigidbody2D _rigidbody;
@@ -10,6 +11,7 @@ public class Movement_Smooth : MonoBehaviour, IKeyboardInputHandler
     private void Awake()
     {
         _controller = GetComponent<IController>();
+        _stats = GetComponent<CharacterStatsHandler>();
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
@@ -29,7 +31,7 @@ public class Movement_Smooth : MonoBehaviour, IKeyboardInputHandler
 
     private void ApplyMovement(Vector2 direction)
     {
-        direction = direction * 5;
+        direction = direction * _stats._CurrentStats._Speed;
         _rigidbody.velocity = direction;
     }
 }

@@ -25,12 +25,12 @@
                 },
                 {
                     "name": "MouseClick",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "08a625f1-c08c-4a3f-ae32-0c68719db3f5",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
