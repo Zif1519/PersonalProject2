@@ -21,8 +21,8 @@ public class Weapon_Shooting : MonoBehaviour, IMouseClickHandler, IMouseMoveHand
     {
         // 싱글턴의 경우는 스타트에서 연결시켜주어야 함
         _projectileManager = ProjectileManager.Instance;
-        _controller.OnMouseClickHandler += Weapon_Shoot;
-        _controller.OnMouseMoveHandler += Weapon_Aim;
+        _controller.OnShootEvent += Weapon_Shoot;
+        _controller.OnLookEvent += Weapon_Aim;
     }
 
     private void Update()

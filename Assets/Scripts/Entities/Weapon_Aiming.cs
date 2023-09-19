@@ -16,7 +16,7 @@ public class Weapon_Aiming : MonoBehaviour, IMouseMoveHandler
 
     private void Start()
     {
-        _controller.OnMouseMoveHandler += Weapon_Aim;
+        _controller.OnLookEvent += Weapon_Aim;
     }
 
 

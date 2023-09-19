@@ -15,8 +15,8 @@ public class TopDownAnimationController : TopDownAnimation
 
     private void Start()
     {
-        _controller.OnMouseClickHandler += Attacking;
-        _controller.OnKeyboardInputHandler += Move;
+        _controller.OnShootEvent += Attacking;
+        _controller.OnMoveEvent += Move;
     }
 
     private void Attacking(AttackSO attackSO)

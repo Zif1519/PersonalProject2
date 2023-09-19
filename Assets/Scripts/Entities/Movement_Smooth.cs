@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class Movement_Smooth : MonoBehaviour, IKeyboardInputHandler
 {
+    [SerializeField]
     private IController _controller;
+    [SerializeField]
     private CharacterStatsHandler _stats;
 
     private Vector2 _movementDirection = Vector2.zero;
-    private Rigidbody2D _rigidbody;
+    [SerializeField] private Rigidbody2D _rigidbody;
 
     private void Awake()
     {
@@ -21,7 +23,7 @@ public class Movement_Smooth : MonoBehaviour, IKeyboardInputHandler
     }
     private void Start()
     {
-        _controller.OnKeyboardInputHandler += Character_Move;
+        _controller.OnMoveEvent += Character_Move;
     }
 
     public void Character_Move(Vector2 direction)

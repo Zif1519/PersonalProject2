@@ -26,7 +26,7 @@ public class Movement_Grid : MonoBehaviour, IKeyboardInputHandler
     }
     private void Start()
     {
-        _controller.OnKeyboardInputHandler += Character_Move;
+        _controller.OnMoveEvent += Character_Move;
     }
 
     private void HandleMoveDelay()
