@@ -1,11 +1,130 @@
-<mxfile host="app.diagrams.net" modified="2023-09-11T01:34:55.415Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Whale/3.22.205.18 Safari/537.36" etag="2qy2OxMD_f_KBQJh_fVP" version="21.7.4" type="github">
-  <diagram name="페이지-1" id="JFJGJNzEGSRKgUtcInXE">
-    <mxGraphModel dx="1343" dy="720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+<mxfile host="app.diagrams.net" modified="2023-09-21T06:32:12.591Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Whale/3.22.205.18 Safari/537.36" etag="JotAaDhCcPRVuItc9_1_" version="21.7.5" type="github">
+  <diagram name="페이지-1" id="5FP3706S1l-MpXKFlqA6">
+    <mxGraphModel dx="1946" dy="-569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="kqNfq4eHX80S6rahorpz-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="50" y="70" width="680" height="380" as="geometry" />
+        <mxCell id="lit4YdR98FuAfoKVWrhH-3" value="게임매니저" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="910" y="1200" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bjRdq1JfHH7JWIjCGSQV-9" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-800" y="1200" width="640" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="bjRdq1JfHH7JWIjCGSQV-10" value="메인 캐릭터 이미지" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-560" y="1290" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="bjRdq1JfHH7JWIjCGSQV-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="bjRdq1JfHH7JWIjCGSQV-11" target="bjRdq1JfHH7JWIjCGSQV-21" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-480" y="1600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bjRdq1JfHH7JWIjCGSQV-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bjRdq1JfHH7JWIjCGSQV-11" target="bjRdq1JfHH7JWIjCGSQV-26" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-265" y="1600" />
+              <mxPoint x="-75" y="1600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bjRdq1JfHH7JWIjCGSQV-11" value="우츠 메뉴바" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-340" y="1290" width="150" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="bjRdq1JfHH7JWIjCGSQV-12" value="우상단,&amp;nbsp; 골드, 젬" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-450" y="1220" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bjRdq1JfHH7JWIjCGSQV-13" value="좌측&lt;br&gt;&lt;br&gt;아이디, 및 캐릭터 정보&lt;br&gt;경험치 등" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-770" y="1290" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="bjRdq1JfHH7JWIjCGSQV-21" value="캐릭터 정보" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-340" y="1690" width="150" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="bjRdq1JfHH7JWIjCGSQV-26" value="인벤토리" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-150" y="1690" width="150" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="bjRdq1JfHH7JWIjCGSQV-28" value="UI 매니저" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1230" y="1200" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bjRdq1JfHH7JWIjCGSQV-30" value="데이터 매니저" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1230" y="1320" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bjRdq1JfHH7JWIjCGSQV-31" value="아이템 매니저" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="1230" y="1440" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bjRdq1JfHH7JWIjCGSQV-32" value="필수 구현 사항&lt;br&gt;1. 아이디, 레벨, 골드, status 버튼, Inventory 버튼" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.roundRectCallout;dx=30;dy=15;size=5;boundedLbl=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="1240" width="610" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bjRdq1JfHH7JWIjCGSQV-33" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2. 스테이터스 보기창 :&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;status 버튼, 인벤토리 버튼 사라지고, 우측에 캐릭정보 표현하기, 뒤로가기 버튼 생기기&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.roundRectCallout;dx=30;dy=15;size=5;boundedLbl=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="1320" width="610" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bjRdq1JfHH7JWIjCGSQV-34" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;3. 인벤토리 보기창 :&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;status 버튼, 인벤토리 버튼 사라지고, 우측에 인벤토리 표현하기, 뒤로가기 버튼 생기기&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.roundRectCallout;dx=30;dy=15;size=5;boundedLbl=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="1400" width="610" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bjRdq1JfHH7JWIjCGSQV-35" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;4. 장착관리 메뉴 :&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;장착여부에 따라서, 아이템 클릭시 착용/해제 여부 묻기, 착용시 E 표시 띄우기&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.roundRectCallout;dx=30;dy=15;size=5;boundedLbl=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="1480" width="610" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="aaTRHKMogGptnOusd9vX-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="aaTRHKMogGptnOusd9vX-1" target="aaTRHKMogGptnOusd9vX-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1040" y="1590" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1040" y="1745" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aaTRHKMogGptnOusd9vX-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="aaTRHKMogGptnOusd9vX-1" target="aaTRHKMogGptnOusd9vX-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1040" y="1845" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aaTRHKMogGptnOusd9vX-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="aaTRHKMogGptnOusd9vX-1" target="aaTRHKMogGptnOusd9vX-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aaTRHKMogGptnOusd9vX-1" value="아이템 매니저&lt;br&gt;&lt;br&gt;모든 캐릭터들은 Enable 된 경우에&lt;br&gt;자기가 들고 있어야 하는 인벤토리 정보를&lt;br&gt;아이템 매니저로부터 가져옴&lt;br&gt;&lt;br&gt;아이템 매니저는 해당 인벤토리 ItemData 의 스크립터블 오브젝트가 있으면 그걸 연결시키고, 없으면 새로 만들어줌." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="910" y="1950" width="240" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="aaTRHKMogGptnOusd9vX-3" value="인벤토리" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="1927.5" width="680" height="285" as="geometry" />
+        </mxCell>
+        <mxCell id="aaTRHKMogGptnOusd9vX-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="aaTRHKMogGptnOusd9vX-5" target="aaTRHKMogGptnOusd9vX-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aaTRHKMogGptnOusd9vX-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="aaTRHKMogGptnOusd9vX-5" target="aaTRHKMogGptnOusd9vX-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1560" y="1560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aaTRHKMogGptnOusd9vX-5" value="InventoryData : ScriptableObject" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="1700" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="aaTRHKMogGptnOusd9vX-6" value="InventoryData =&amp;gt; 인벤토리 초기화를 위한&lt;br&gt;정보를 위해." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1740" y="1970" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aaTRHKMogGptnOusd9vX-8" value="내용에 대해서 많이 고민했는데&lt;br&gt;결국은 상점의 초기화 상점 데이터,&lt;br&gt;캐릭터들의 초기화 데이터,&lt;br&gt;아이템의 기본 데이터,&lt;br&gt;등을 담기 위한 용도 외에는 사용하지 않기로함." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1610" y="1700" width="270" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="aaTRHKMogGptnOusd9vX-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aaTRHKMogGptnOusd9vX-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1970" y="1565" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aaTRHKMogGptnOusd9vX-10" value="장점 : 유니티에서 생성하고,&lt;br&gt;그 값을 변경할수 있고,&lt;br&gt;유니티의 Class들도 마구 사용가능하다&lt;br&gt;&lt;br&gt;예를들어 나는 사과라는 애는&amp;nbsp;&lt;br&gt;기본적으로 내가 가지고 있는 사과 스프라이트랑&lt;br&gt;연결시키도록하고, 기본 가격도 100원,&lt;br&gt;뭐 이런저런 설정들을 기억하고 있으면 하는데?&lt;br&gt;&lt;br&gt;라고 할때 만들어 두고 사용하도록!!" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1610" y="1460" width="270" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="aaTRHKMogGptnOusd9vX-13" value="프리팹으로 모든 객체들을 미리 만들어두면&lt;br&gt;프리팹들이 너무 많은 용량을 차지해 버림.&lt;br&gt;&lt;br&gt;또한 관리가 힘들어서 예를들어 사과라는 프리팹에서 사과의 가격을 변경하고 싶다고 할땐?&lt;br&gt;&lt;br&gt;사과 프리팹을 가서, 사과의 가격정보를 갖는 스크립트가 달린 오브젝트를 찾고?&lt;br&gt;인스펙터창에서 그 값을 수정해야함&lt;br&gt;&lt;br&gt;-&amp;gt; 이걸 스크립터블 오브젝트 폴더에 가서&lt;br&gt;해당 수치 변경으로 끝남!!!&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1970" y="1460" width="270" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="aaTRHKMogGptnOusd9vX-15" value="ItemData : ScriptableObject" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="1800" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="aaTRHKMogGptnOusd9vX-20" value="Item Class&lt;br&gt;&lt;br&gt;&lt;br&gt;&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1121" y="2770" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="aaTRHKMogGptnOusd9vX-21" value="Inventory Class&lt;br&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="530" y="2470" width="240" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="aaTRHKMogGptnOusd9vX-22" value="ItemData&lt;br&gt;&lt;br&gt;고정값" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="2660" width="90" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
